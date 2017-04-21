@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class MayhemApplication {
 
-	@RequestMapping("/")
+    @RequestMapping("/")
     String home() {
-	    return "Mayhem";
+        return "Mayhem";
     }
 
-	public static void main(String[] args) {
-		SpringApplication.run(MayhemApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MayhemApplication.class, args);
+    }
 }
