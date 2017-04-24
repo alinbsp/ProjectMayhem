@@ -25,6 +25,15 @@ $ docker exec -it cockroachdb-mayhem bash
 (cockroachdb-mayhem)$ exit
 ```
 
+Install needed dependecies:
+```
+go get github.com/lib/pq
+
+go get github.com/jinzhu/gorm
+
+go get github.com/jinzhu/gorm/dialects/postgres
+```
+
 Get and run the project. In the project directory ('tracker-go') run:
 ```
 go run main.go
