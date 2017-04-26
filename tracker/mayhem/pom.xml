@@ -25,6 +25,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
@@ -39,6 +40,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- the couchbase java sdk -->
+		<dependency>
+			<groupId>com.couchbase.client</groupId>
+			<artifactId>java-client</artifactId>
+			<version>2.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-bundle-jaxrs</artifactId>
+			<version>2.7.18</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -49,6 +63,16 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- for couchbase prereleases, use the couchbase repo -->
+	<repositories>
+		<repository>
+			<id>couchbase</id>
+			<name>couchbase repo</name>
+			<url>http://files.couchbase.com/maven2</url>
+			<snapshots><enabled>false</enabled></snapshots>
+		</repository>
+	</repositories>
 
 
 </project>

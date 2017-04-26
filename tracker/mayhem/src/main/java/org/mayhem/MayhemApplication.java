@@ -17,6 +17,7 @@ public class MayhemApplication {
     }
 
     public static void main(String[] args) {
+        System.setProperty("javax.ws.rs.ext.RuntimeDelegate", "org.apache.cxf.jaxrs.impl.RuntimeDelegateImpl");
         SpringApplication.run(MayhemApplication.class, args);
     }
 }
